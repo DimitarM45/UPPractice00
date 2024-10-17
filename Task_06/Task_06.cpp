@@ -21,7 +21,6 @@ int main()
 	if (isFirstLargest)
 	{
 		largestNum = firstNum;
-
 	}
 	else if (isSecondLargest)
 	{
