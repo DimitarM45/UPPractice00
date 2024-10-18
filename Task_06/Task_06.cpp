@@ -9,37 +9,26 @@ int main()
 	cin >> secondNum;
 	cin >> thirdNum;
 
-	int largestNum = 0;
-	int smallestNum = 0;
+	int largestNum = firstNum;
 
-	bool isFirstLargest = firstNum >= secondNum && firstNum >= thirdNum;
-	bool isSecondLargest = secondNum >= firstNum && secondNum >= thirdNum;
-
-	bool isFirstSmallest = firstNum <= secondNum && firstNum <= thirdNum;
-	bool isSecondSmallest = secondNum <= firstNum && secondNum <= thirdNum;
-
-	if (isFirstLargest)
-	{
-		largestNum = firstNum;
-	}
-	else if (isSecondLargest)
+	if (secondNum > largestNum)
 	{
 		largestNum = secondNum;
 	}
-	else
+
+	if (thirdNum > largestNum)
 	{
 		largestNum = thirdNum;
 	}
 
-	if (isFirstSmallest)
-	{
-		smallestNum = firstNum;
-	}
-	else if (isSecondSmallest)
+	int smallestNum = firstNum;
+
+	if (secondNum < smallestNum)
 	{
 		smallestNum = secondNum;
 	}
-	else
+
+	if (thirdNum < smallestNum)
 	{
 		smallestNum = thirdNum;
 	}
